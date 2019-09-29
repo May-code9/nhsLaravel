@@ -1,0 +1,200 @@
+a{
+  color: #D62430;
+}
+a:hover{
+  color: #D62430;
+}
+.btn-common {
+  background: #D62430;
+}
+.btn-common:hover{
+ box-shadow: 0 14px 26px -12px rgba(233,30,99,0.42), 0 4px 23px 0px rgba(233,30,99,0.12), 0 8px 10px -5px rgba(233,30,99,0.02);
+}
+/* Back to Top */
+.back-to-top i {
+  background-color: #D62430;
+}
+/* Top Roof */
+#roof{
+  background: #D62430;
+}
+/* Navbar */
+.slicknav_btn{
+  border-color: #D62430;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.slicknav_menu .slicknav_btn .slicknav_icon-bar{
+  background: #D62430;
+}
+.slicknav_menu .slicknav_btn:hover{
+  background: #D62430;
+}
+.slicknav_nav .active a{
+  background: #D62430;
+}
+.slicknav_nav a:hover, .slicknav_nav .active{
+  color: #D62430;
+}
+.slicknav_nav .dropdown li a.active{
+  background: #D62430;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background: #D62430;
+}
+.navbar-event .navbar-nav li a:hover,
+.navbar-event .navbar-nav li .active > a,
+.navbar-event .navbar-nav li a:focus {
+  color: #D62430;
+}
+.navbar-event .dropdown .dropdown-menu {
+  border-color: #D62430;
+}
+.navbar-event .dropdown .dropdown-menu > li > a:hover,
+.navbar-event .dropdown .dropdown-menu > li > a .active {
+  color: #D62430;
+}
+.navbar-event .dropdown .dropdown-menu > li.active > a {
+  background: #D62430 !important;
+  color: #fff;
+}
+.navbar-event .navbar-nav > .active > a,
+.navbar-event .navbar-nav > .active > a:focus,
+.navbar-event .navbar-nav > .active > a:hover {
+  background: #D62430 !important;
+  color: #fff;
+}
+.navbar-event .navbar-nav > .open > a,
+.navbar-event .navbar-nav > .open > a:focus,
+.navbar-event .navbar-nav > .open > a:hover {
+  color: #D62430;
+}
+.navbar-event .navbar-nav > .active > a,
+.navbar-event .navbar-nav > .active > a:hover{
+  color: #fff;
+}
+/* Countdown */
+.countdown-timer .text h4{
+  color: #D62430;
+}
+.time-entry span{
+    color: #D62430;
+}
+/* Event */
+#event .tab-block .icon i{
+  color: #D62430;
+}
+/* Featured icon */
+.featured-box .icon i{
+  color: #D62430;
+}
+/* Schedule */
+.main-board .day > li.active > a,
+.main-board .day > li.active > a:focus,
+.main-board .day > li.active > a:hover{
+  background-color: #D62430;
+}
+.main-board .day > li > a:focus,
+.main-board .day > li > a:hover{
+  background: #D62430;
+}
+/* Gellery */
+.gallery-item .icons i:hover{
+  color: #D62430;
+  border-color: #D62430;
+}
+/* Video */
+.ready-to-play:before{
+  background: #D62430;
+}
+/* Blog */
+#blog .blog-info h3 a:hover{
+  color: #D62430;
+}
+/* Pricing Table */
+.pricing-table .table-icon i{
+  color: #D62430;
+}
+.pricing-table .table-icon i{
+  background: rgba(233, 30, 99, 0.07);
+}
+/* Contact */
+#contact .title-header .icon i{
+  color: #D62430;
+}
+#contact .label-line.active .label{
+   color: #D62430;
+}
+#contact .label-line.active .span:before{
+  background: #D62430;
+}
+#contact .span:before{
+  background: #D62430;
+}
+/* page header */
+.page-header .breadcrumb li{
+  color: #D62430;
+}
+.page-header .breadcrumb li a:hover{
+  color: #D62430;
+}
+/* Intro */
+#intro::before{
+  background: #D62430;
+}
+#subscribe-section::before{
+  background: #D62430;
+}
+#subscribe-section
+.subscribe-box
+.subscribe-form button:hover{
+  color: #D62430;
+}
+/* Speakers others */
+#team .team-img::before{
+  background: rgba(233, 30, 99, 0);
+}
+
+/* Blog page */
+.post-title a:hover{
+  color: #D62430;
+}
+.blog-post .post-content .meta .meta-part a:hover{
+  color: #D62430;
+}
+#pagination .current,
+#pagination a:hover{
+  color: #D62430;
+}
+.widget-search .search-btn:hover{
+  color: #D62430;
+}
+.widget-title{
+  border-bottom-color: #D62430;
+}
+#sidebar .posts-list .widget-content a:hover{
+  color: #D62430;
+}
+#sidebar .cat-list li a:hover{
+  color: #D62430;
+}
+#sidebar .tag a:hover{
+  color: #D62430;
+}
+.post-slide .post-content h3 a:hover{
+  color: #D62430;
+}
+.post-slide .post-content .meta .meta-part a:hover{
+  color: #D62430;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+  background: #D62430;
+}
+#comments .comment-content .comment-date{
+  color: #D62430;
+}
+.reply-link{
+  color: #D62430;
+}

@@ -1,0 +1,128 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Transaction;
+use Auth;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
+use QrCode;
+use App\User;
+use Alert;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $allUsers = 'active';
+        $indexUser = 'active';
+        $listUsers = User::paginate(30);
+        return view('dashboard.body.user.list', compact('indexUser', 'allUsers', 'listUsers'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $allUsers = 'active';
+        $createUser = 'active';
+
+        $amount = amount();
+
+        return view('dashboard.body.user.create', compact('createUser', 'allUsers', 'amount'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $user = new User();
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        $getUserId = User::where([['first_name', $request->first_name], ['last_name', $request->last_name], ['email', $request->email]])->get()->last();
+
+        $num = rand(108956, 287903876);
+        $amount = amount();
+
+        $user = new Transaction();
+        $user->user_id = $getUserId->id;
+        $user->amount = $amount;
+        $user->ref_no = 'T' . $num;
+        $user->save();
+
+        return redirect('/users')->with('success_status', 'User Payment Added');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $allUsers = 'active';
+        $indexUser = 'active';
+        $user = User::where('id', $id)->get()->last();
+        $username = $user->first_name . ' ' . $user->last_name . ', ' . $user->email;
+        $link = 'https://nhs.macode09.com/users/' . $id;
+        $qrcode = QrCode::size(400)->generate($link);
+        $qrcode2 = QrCode::size(200)->generate($link);
+        $status = transactionId($id);
+
+        return view('dashboard.body.user.iList', compact('allUsers', 'indexUser', 'qrcode', 'qrcode2', 'username', 'status'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}

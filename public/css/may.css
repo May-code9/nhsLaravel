@@ -1,0 +1,56 @@
+@media (min-width: 768px) {
+  .push-1 {
+    left: 11.66666666666666%;
+  }
+}
+
+@media (min-width: 992px) {
+  .push-1 {
+    left: 11.66666666666666%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .push-1 {
+    left: 12.66666666666666%;
+  }
+}
+@media (min-width: 768px) {
+  .push-2 {
+    left: 20.66666666666666%;
+  }
+}
+
+@media (min-width: 992px) {
+  .push-2 {
+    left: 20.66666666666666%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .push-2 {
+    left: 24.66666666666666%;
+  }
+}
+.forPre{
+  font-size: 13px;
+  font-family: 'Open Sans';
+  color: #797979;
+}
+.forCode {
+  font-size: 110%;
+  border:1px solid #e83e8c;
+  border-radius: 3px;
+  padding: 2px;
+}
+.pag {
+  margin: 1px;
+  border-radius: .25em;
+}
+.user {
+  background: #35404d;
+  border-radius: .25em;
+}
+.right {
+  float: right;
+}
