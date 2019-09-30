@@ -88,7 +88,7 @@
                 <div class="item active">
                     <img src="assets/img/slider/bg.jpg" alt="">
                     <div class="carousel-caption">
-                        <h2 class="wow fadeInRight" data-wow-delay="300ms">2nd National Health Summit<br> THEME<br>
+                        <h2 class="wow fadeInRight" data-wow-delay="300ms">2nd National Health Summit<br> <span style="color: #00f000">THEME</span><br>
                             Patient Centered Care</h2>
                         <div class="buttons">
                             <a class="btn btn-lg btn-border wow fadeInRight" data-wow-delay="300ms"
@@ -197,7 +197,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-6">
+                    <br>
+                    <div class="col-md-12 col-sm-12">
                         <div class="blog-post single-gallery">
                             <div class="post-content" style="background-color: #fff; opacity: 0.8;">
                                 <div class="wow fadeInLeft" data-wow-delay="0.2s">
@@ -261,7 +262,7 @@
                         <h3>LOC Chairman's Welcome Address</h3>
 
                         <div class="button-area">
-                            <a href="{{ asset('pdf/EVENT BROCHURE OF THE 2ND NATIONAL HEALTH SUMMIT ABUJA 2019.doc') }}" class="btn btn-common">Click to View</a>
+                            <a href="{{ asset('pdf/EVENT BROCHURE OF THE 2ND NATIONAL HEALTH SUMMIT ABUJA 2019.pdf') }}" class="btn btn-common">Click to View</a>
                         </div>
                     </div>
                 </div>
@@ -277,22 +278,23 @@
                                 style="color: #42b3e5">Organizers</span></h2>
                     <p class="section-subcontent wow fadeInUp" data-wow-delay="0.2s" ><span style="color: #fff">Meet the organizing committee</span></p>
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 about">
+
+                <div class="col-md-3 col-sm-6 col-xs-12 about">
                     <div class="spnsors-logo wow fadeInUp" data-wow-delay="0.1s">
                         <a href="{{ route('nma.about.noc') }}" class="btn-cta btn btn-common">NOC Members</a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 about">
+                <div class="col-md-3 col-sm-6 col-xs-12 about" style="margin-bottom: 10px">
                     <div class="spnsors-logo wow fadeInUp" data-wow-delay="0.2s">
                         <a href="{{ route('nma.about.cpc') }}" class="btn-cta btn btn-common">CPC Members</a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 about">
+                <div class="col-md-3 col-sm-6 col-xs-12 about">
                     <div class="spnsors-logo wow fadeInUp" data-wow-delay="0.3s">
                         <a href="{{ route('nma.about.loc') }}" class="btn-cta btn btn-common">LOC Members</a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 about">
+                <div class="col-md-3 col-sm-6 col-xs-12 about">
                     <div class="spnsors-logo wow fadeInUp" data-wow-delay="0.4s">
                         <a href="{{ route('nma.about.secretariat') }}" class="btn-cta btn btn-common" >Secretariat</a>
                     </div>
