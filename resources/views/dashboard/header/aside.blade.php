@@ -4,7 +4,7 @@
         <!-- sidebar menu start-->
 
         <ul class="sidebar-menu" id="nav-accordion">
-            @if(adminStatus() > 2)
+            @if(adminStatus() > 1)
                 <li>
                     <a class="user" href="#">
                         <i class="fa fa-user"></i>
@@ -31,16 +31,18 @@
                                     href="{{ route('users.index') }}">View</a></li>
                     </ul>
                 </li>
+            @endif
+                @if(adminStatus() == 4)
                 <li class="sub-menu">
-                    <a href="javascript:;" class="@if (isset($video)) {{$video}} @endif">
+                    <a href="javascript:;" class="@if (isset($addAdmin)) {{$addAdmin}} @endif">
                         <i class="fa fa-eye"></i>
                         <span>Admin Users</span>
                     </a>
                     <ul class="sub">
-                        <li class="@if (isset($videoCreate)) {{$videoCreate}} @endif"><a
-                                    href="#">Upload</a></li>
-                        <li class="@if (isset($videoIndex)) {{$videoIndex}} @endif"><a
-                                    href="#">View</a></li>
+                        <li class="@if (isset($addAdminCreate)) {{$addAdminCreate}} @endif"><a
+                                    href="{{ route('addAdmin.create') }}">Make Admin</a></li>
+                        <li class="@if (isset($addAdminIndex)) {{$addAdminIndex}} @endif"><a
+                                    href="{{ route('addAdmin.index') }}">View</a></li>
                     </ul>
                 </li>
 

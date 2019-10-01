@@ -21,12 +21,14 @@
                         </div>
                     @endif
                     {{ $listUsers->links() }}
+                        @if(adminStatus() > 2)
                         <section class="card col-lg-12">
                             <header class="card-header">
                                 <a href="/exportPaid/xlsx" class="btn btn-success">Export Registered Users to .xlsx</a>
                                 <a href="/exportAll/xlsx" class="btn btn-primary" style="margin-left: 10px">Export All Users to .xlsx</a>
                             </header>
                         </section>
+                        @endif
                     <section class="card col-lg-12">
                         <header class="card-header">
                             <div class="top-nav ">

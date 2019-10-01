@@ -85,8 +85,10 @@
                         @csrf
                         <div class="title-header">
                             <h3 class="title-medium pull-left">Register here for our Conference</h3>
+
                         </div>
                         <div class="row">
+                            <small style="color: #ff0000">Password does not have to be your gmail password. Use a password you can remember.</small>
                             <div class="col-md-6">
                                 <div class="label-line">
                                     <span class="span" style="background: black"></span>
@@ -147,6 +149,7 @@
                                     <input type="password" class="input @error('password') is-invalid @enderror"
                                            id="password" name="password" required
                                            data-error="Please enter your password" style="color: #000">
+
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

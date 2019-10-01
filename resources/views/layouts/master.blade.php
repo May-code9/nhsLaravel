@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="https://nmanationalhealthsummit.com/" />
+    <meta property="og:image:secure_url" content="https://nmanationalhealthsummit.com/assets/img/nhs_logo.png" />
+
     <title>{{ config('app.name') }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -25,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.css') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/colors/default.css') }}" media="screen"/>
+
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('css/preloader.css') }}">
     <style media="screen">
         .floatLeft {
@@ -40,11 +45,19 @@
     </script>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TXF7CQ4');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TXF7CQ4');</script>
     <!-- End Google Tag Manager -->
 @if(Route::currentRouteName() == 'nma.tickets')
     <!-- Global site tag (gtag.js) - Google Ads: 708211119 -->
@@ -65,9 +78,10 @@
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
         <script>
             let url = '/tickets';
+
             function gtag_report_conversion(url) {
                 var callback = function () {
-                    if (typeof(url) != 'undefined') {
+                    if (typeof (url) != 'undefined') {
                         window.location = url;
                     }
                 };
@@ -83,14 +97,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 </head>
 <body class="width">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXF7CQ4"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXF7CQ4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="preloader-wrapper">
     <div class="preloader">
-        <img src="{{ asset('img/Infinity.gif') }}" width="90%" height="auto">
+        <img src="{{ asset('assets/img/nhs_logo.png') }}" width="90%" height="auto">
     </div>
 </div>
+
 @if(Route::currentRouteName() != 'nma.home')
     @include('partials.header2')
 @endif

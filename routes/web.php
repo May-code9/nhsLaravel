@@ -28,6 +28,8 @@ Route::get('/about/loc', ['as'=>'nma.about.loc', 'uses'=>'HomeController@about_l
 Route::get('/about/secretariat', ['as'=>'nma.about.secretariat', 'uses'=>'HomeController@about_secretariat']);
 Route::get('/account', ['as'=>'nma.account', 'uses'=>'AccountController@account']);
 Route::post('/userPayment', 'TransactionController@userPayment')->name('userPayment');
+Route::apiResource('/api/register', 'Api\Register');
+Route::apiResource('/api/login', 'Api\UserLogin');
 
 Route::group(['middleware' => ['auth', 'adminauth']], function () {
    Route::get('/dashboard', ['as'=>'admin.dashboard', 'uses'=>'Admin\DashboardController@index']);
@@ -37,4 +39,5 @@ Route::group(['middleware' => ['auth', 'adminauth']], function () {
    Route::post('/search/users', ['as'=>'admin.search.users', 'uses'=>'Admin\SearchController@search_users']);
    Route::get('/exportPaid/{type}', 'Admin\ExcelController@exportPaid');
    Route::get('/exportAll/{type}', 'Admin\ExcelController@exportAll');
+    Route::resource('/addAdmin', 'Admin\AdminController');
 });
