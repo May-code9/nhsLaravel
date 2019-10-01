@@ -45,7 +45,7 @@
                                 <p style="color: #D62430"><strong>Early Bird:</strong></p>
                                 <ul>
                                     <li style="color: black; list-style: circle; text-align: left;margin-left:10px">4th
-                                        September to 4th October
+                                        September to 10th October
                                     </li>
                                     <li style="color: black; list-style: circle; text-align: left;margin-left:10px">
                                         ₦20,000
@@ -54,7 +54,7 @@
                                 <hr style="color: black">
                                 <p style="color: #D62430"><strong>Late Registration:</strong></p>
                                 <ul>
-                                    <li style="color: black; list-style: circle; text-align: left;margin-left:10px">5th
+                                    <li style="color: black; list-style: circle; text-align: left;margin-left:10px">11th
                                         October to 3rd November
                                     </li>
                                     <li style="color: black; list-style: circle; text-align: left;margin-left:10px">
