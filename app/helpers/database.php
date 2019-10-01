@@ -45,7 +45,7 @@ function countTransaction() {
 }
 function amount() {
     $nowDate = Carbon::now()->toDateString();
-    $early = '2019-10-04';
+    $early = '2019-10-10';
     $late = '2019-11-03';
     $onSite = '2019-11-04';
     $convertedNowDate = strtotime($nowDate);
