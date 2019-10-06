@@ -36,7 +36,7 @@
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!',
+                    confirmButtonText: 'Yes, UPDATE!',
                 }).then((result) => {
                     if (result.value) {
                         var userId = $('#user_id').val();

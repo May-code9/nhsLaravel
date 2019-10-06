@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Login;
 use App\Http\Resources\UserLogin as UserResource;
+use Illuminate\Support\Facades\Hash;
 
 class UserLogin extends Controller
 {
@@ -38,13 +39,65 @@ class UserLogin extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::where('email', $request->email)->get()->last();
-        $userId = $user->id;
-        return new UserResource(Login::create([
-                'user_id' => $userId,
-                'slug' => 1,
-            ])
-        );
+        $userCount = User::where('email', $request->email)->count();
+        if($userCount == 0) {
+            $response = array(
+                'success' => false,
+                'message' => 'User does not exist, please register',
+            );
+        }
+        else {
+            $user = User::where('email', $request->email)->get()->last();
+            $loggedIn = Login::where('user_id', $user->id)->count();
+            if($loggedIn == 0) {
+                $check = Hash::check($request->password, $user->password);
+                if($check) {
+                    $userId = $user->id;
+
+                    new UserResource(Login::create([
+                        'user_id' => $userId,
+                        'slug' => 1,
+                    ]));
+
+                    $response = array(
+                        'success' => true,
+                        'message' => 'Login Successful',
+                    );
+                }
+                else {
+                    $response = array(
+                        'success' => false,
+                        'message' => 'Password incorrect',
+                    );
+                }
+            }
+            else {
+                Login::where('user_id', $user->id)->delete();
+
+                $check = Hash::check($request->password, $user->password);
+                if($check) {
+                    $userId = $user->id;
+
+                    new UserResource(Login::create([
+                        'user_id' => $userId,
+                        'slug' => 1,
+                    ]));
+
+                    $response = array(
+                        'success' => true,
+                        'message' => 'Login Successful',
+                    );
+                }
+                else {
+                    $response = array(
+                        'success' => false,
+                        'message' => 'Password incorrect',
+                    );
+                }
+            }
+        }
+
+        return response($response);
     }
 
     /**
@@ -89,6 +142,6 @@ class UserLogin extends Controller
      */
     public function destroy($id)
     {
-        //
+        Login::where('user_id', $id)->delete();
     }
 }

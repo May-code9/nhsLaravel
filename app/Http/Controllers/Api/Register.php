@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Login;
+use App\Test;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -38,14 +40,36 @@ class Register extends Controller
      */
     public function store(Request $request)
     {
-        return new UserResource(User::create([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
+        $checkEmail = Test::where('email', $request->email)->count();
+        if($checkEmail == 0){
+            new UserResource(Test::create([
+                'first_name' => $request->firstname,
+                'last_name' => $request->lastname,
                 'phone' => $request->phone,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-            ])
-        );
+            ]));
+
+            $user = Test::where('email', $request->email)->get()->last();
+            $userId = $user->id;
+            new \App\Http\Resources\UserLogin(Login::create([
+                'user_id' => $userId,
+                'slug' => 1,
+            ]));
+
+            $response = array(
+                'success' => true,
+                'message' => 'Login Successful',
+            );
+        }
+        else {
+            $response = array(
+                'success' => false,
+                'message' => 'User Already Exist',
+            );
+        }
+
+        return response($response);
     }
 
     /**

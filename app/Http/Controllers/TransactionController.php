@@ -16,6 +16,13 @@ class TransactionController extends Controller
 
         return view('pages.transaction', compact('regTickets', 'price'));
     }
+    public function mobile_trans(Request $request, $email)
+    {
+        $price = amount();
+        $user = User::where('email', $email)->get()->last();
+
+        return view('pages.mobile', compact( 'price', 'user'));
+    }
     public function userPayment(Request $request)
     {
         //set reference to a variable @ref
