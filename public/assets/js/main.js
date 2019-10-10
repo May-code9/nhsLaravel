@@ -21,6 +21,14 @@
   +'<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
 });
 
+jQuery('#late').countdown('2019/11/03',function(event){
+    var $this=jQuery(this).html(event.strftime(''
+        +'<div class="time-entry days"><span>%-D</span> Days</div> '
+        +'<div class="time-entry hours"><span>%H</span> Hours</div> '
+        +'<div class="time-entry minutes"><span>%M</span> Minutes</div> '
+        +'<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
+});
+
 jQuery('#earlyBird').countdown('2019/10/10',function(event){
     var $this=jQuery(this).html(event.strftime(''
         +'<div class="time-entry days"><span>%-D</span> Days</div> '

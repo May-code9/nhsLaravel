@@ -52,7 +52,7 @@ function amount() {
     $convertedEarly = strtotime($early);
     $convertedLate = strtotime($late);
     $convertedOnSite = strtotime($onSite);
-    if($convertedNowDate < $convertedEarly) {
+    if($convertedNowDate <= $convertedEarly) {
         $amount = 20000;
     }
     elseif($convertedNowDate > $convertedEarly && $convertedNowDate < $convertedLate) {

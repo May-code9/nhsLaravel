@@ -14,13 +14,30 @@
             </div>
         </div>
     </div>
-
+    @if(amount() == 25000)
     <section class="countdown-timer" style="background: #f0f3f5">
         <div class="container" >
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="text">
-                        <h2>Early Bird<br>Registration Closes in:</h2>
+                        <h2>Late <br>Registration Closes in:</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="time-countdown" style="margin-top: 20px">
+                        <div id="late" class="time-count"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @elseif(amount() == 20000)
+    <section class="countdown-timer" style="background: #f0f3f5">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="text">
+                        <h2>Early Bird <br>Registration Closes in:</h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -31,6 +48,7 @@
             </div>
         </div>
     </section>
+    @endif
     <hr style="margin: 0">
 
     <section id="contact">

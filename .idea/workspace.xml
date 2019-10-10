@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb200e9-7953-4de1-b0da-429f136b6cc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TransactionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/footer/data/buy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/footer/data/buy.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/body/user/iList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/body/user/iList.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ican/icanLaravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WEbsites/webJobs/oki_web" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RunDashboard">
@@ -165,7 +161,8 @@
       <workItem from="1569994957681" duration="1314000" />
       <workItem from="1570222042379" duration="4048000" />
       <workItem from="1570281297490" duration="5178000" />
-      <workItem from="1570316644597" duration="5158000" />
+      <workItem from="1570316644597" duration="8631000" />
+      <workItem from="1570428307322" duration="3407000" />
     </task>
     <servers />
   </component>

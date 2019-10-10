@@ -84,9 +84,9 @@ class UserController extends Controller
         $indexUser = 'active';
         $user = User::where('id', $id)->get()->last();
         $username = $user->first_name . ' ' . $user->last_name . ', ' . $user->email;
-        $link = 'https://nhs.macode09.com/users/' . $id;
+        $link = 'https://nmanationalhealthsummit.com/users/' . $id;
         $qrcode = QrCode::size(400)->generate($link);
-        $qrcode2 = QrCode::size(200)->generate($link);
+        $qrcode2 = QrCode::size(300)->generate($link);
         $status = transactionId($id);
 
         return view('dashboard.body.user.iList', compact('allUsers', 'indexUser', 'qrcode', 'qrcode2', 'username', 'status'));

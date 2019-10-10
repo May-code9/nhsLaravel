@@ -31,11 +31,15 @@ Route::get('/about/loc', ['as'=>'nma.about.loc', 'uses'=>'HomeController@about_l
 Route::get('/about/secretariat', ['as'=>'nma.about.secretariat', 'uses'=>'HomeController@about_secretariat']);
 Route::get('/account', ['as'=>'nma.account', 'uses'=>'AccountController@account']);
 Route::post('/userPayment', 'TransactionController@userPayment')->name('userPayment');
-Route::apiResource('/api/register', 'Api\Register');
-Route::apiResource('/api/login', 'Api\UserLogin');
+Route::group(['middleware'=>'cors'], function()
+{
+	Route::apiResource('/api/register', 'Api\Register');
+	Route::apiResource('/api/login', 'Api\UserLogin');	
+	Route::get('/api/getUser/{email}', 'Api\GetController@getUser');
+	Route::post('/api/deleteLogin/{email}', 'Api\GetController@deleteLogin');
+});
+
 Route::get('/mobile/transaction/{email}', ['as'=>'nma.mobile.transaction', 'uses'=>'TransactionController@mobile_trans']);
-Route::get('/api/getUser/{email}', 'Api\GetController@getUser');
-Route::post('/api/deleteLogin/{email}', 'Api\GetController@deleteLogin');
 
 Route::group(['middleware' => ['auth', 'adminauth']], function () {
    Route::get('/dashboard', ['as'=>'admin.dashboard', 'uses'=>'Admin\DashboardController@index']);

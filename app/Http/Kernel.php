@@ -64,6 +64,7 @@ class Kernel extends HttpKernel
         'authuser' => \App\Http\Middleware\AuthUser::class,
         'transaction' => \App\Http\Middleware\UserTransaction::class,
         'adminauth' => \App\Http\Middleware\AdminAuth::class,
+        'cors' => \App\Http\Middleware\Cors::class,
     ];
 
     /**

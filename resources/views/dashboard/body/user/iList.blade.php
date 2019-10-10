@@ -8,7 +8,7 @@
         <section class="wrapper" style="min-height: 570px;">
             <!-- page start-->
             <div class="row">
-                <div class="col-lg-5 push-2">
+                <div class="col-lg-4 push-2">
                     <section class="card">
                         <div class="card-header">Scan QR Code</div>
                         <div class="card-body">
@@ -29,7 +29,7 @@
                                     <div class="col-md-12 mb-3">
                                         <div style="text-align: center">{{ $username }}</div>
                                         <div style="text-align: center">Registration Status: <strong>@if($status == 0) Not Completed @else Completed @endif</strong></div>
-                                        {!! $qrcode !!}
+                                        {!! $qrcode2 !!}
                                     </div>
                                 </div>
 
