@@ -142,6 +142,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <script type="text/javascript">
     $(function () {
         var width = $('.width').width();
+        var div = 1;
         if (width < 760) {
             $('.smallScreen').slideDown('4000');
             $('.headerForSmallScreen').show();
@@ -156,8 +157,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             $('.bigScreen').slideDown('4000');
             $('.headerForBigScreen').show();
             $('.headerForSmallScreen').remove();
+            
         }
-
+        if (width < 900) {
+            div = 7;
+        }
+        else {
+            div = 3;
+        }
+        var headerWidth = $('.headerLeft').width();
+        var headerWidth = -((((width - headerWidth)/width) * 100)/div);
+        $('.headerLeft').css('left', headerWidth+'%');
     });
 
 

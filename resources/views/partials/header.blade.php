@@ -17,7 +17,7 @@
                                 src="{{ asset('assets/img/nma_logo.png') }}" class="addWH" alt="" width="auto" height="60"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav " style="left:-15%">
+                    <ul class="nav navbar-nav headerLeft">
                         <li class="@if(isset($index)) {{ $index }} @endif"><a href="{{ route('nma.home') }}">Home</a>
                         </li>
                         <li><a href="#organizers">Organizers</a></li>

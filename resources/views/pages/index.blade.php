@@ -373,7 +373,7 @@
                         style="visibility: visible;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;">
                         <span style="color: #fff">Speakers</span></h2>
                 </div>
-                <div class="col-md-2 col-sm-6 col-xs-12"></div>
+                <div class="col-md-2 col-xs-12"></div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="speakers-member wow fadeIn animated" data-wow-delay="0.3s"
                          style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
