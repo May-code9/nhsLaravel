@@ -30,8 +30,9 @@
                     <img src="assets/img/slider/bg.jpg" alt="">
                     <div class="carousel-caption">
                         <h2 class="wow fadeInRight" data-wow-delay="300ms">2nd National Health Summit <span style="font-size: 26px; color: #D62430"><br>THEME: Patient Centered Care</span></h2>
-                        <div class="buttons fadeInDown" data-wow-delay="0.2s"><a class="btn btn-lg btn-common wow"
-                                                                                 href="{{ route('nma.tickets') }}"><strong style="font-size: 20px">Register</strong> </a>
+                        <div class="buttons fadeInDown" data-wow-delay="0.2s">
+                            <a class="btn btn-lg btn-common wow" href="{{ route('nma.tickets') }}"><strong style="font-size: 20px">Register</strong> </a>
+                            <a class="btn btn-lg btn-border wow fadeInRight" data-wow-delay="300ms" href="{{ route('nma.accomodation') }}"> <strong style="font-size: 20px">Accomodation</strong></a>
                         </div>
                         <a data-scroll href="#featured">
                             <div class="rev-scroll-btn wow fadeInUp" data-wow-delay="600ms">
@@ -58,8 +59,7 @@
                         <div class="buttons">
                             <a class="btn btn-lg btn-common wow fadeInLeft" data-wow-delay="300ms"
                                href="{{ route('nma.tickets') }}"> <strong style="font-size: 20px">Register</strong></a>
-                            <a class="btn btn-lg btn-border wow fadeInRight" data-wow-delay="300ms" href="#"> <strong style="font-size: 20px">Know
-                                    More</strong></a>
+                            <a class="btn btn-lg btn-border wow fadeInRight" data-wow-delay="300ms" href="{{ route('nma.accomodation') }}"> <strong style="font-size: 20px">Accomodation</strong></a>
                         </div>
                         <a data-scroll href="#featured">
                             <div class="rev-scroll-btn wow fadeInUp" data-wow-delay="600ms">
@@ -443,6 +443,22 @@
                         </div>
                         <div class="team-img">
                             <img src="assets/img/teacher/team-1.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
+                         style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                        <div class="team-desc">
+                            <h3>Chief Co-Host</h3>
+                            <h5>Governor of Nasarawa State; Abdullahi Sule</h5>
+                            <p>Engineer Abdullahi Sule (born December 26, 1959) is a Nigerian entrepreneur, businessman and politician. He is the Governor of Nasarawa State in the 2019 Governorship ...<a
+                                        href="https://en.wikipedia.org/wiki/Abdullahi_Sule"
+                                        target="_blank">Read More</a></p>
+                        </div>
+                        <div class="team-img">
+                            <img src="assets/img/teacher/team-7.png" alt="">
 
                         </div>
                     </div>

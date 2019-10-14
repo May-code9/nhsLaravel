@@ -92,6 +92,7 @@
 
             <ul class="wpb-mobile-menu">
                 <li class="@if(isset($index)) {{ $index }} @endif"><a href="{{ route('nma.home') }}">Home</a></li>
+                <li><a href="{{ route('nma.accomodation') }}">Accomodation</a></li>
                 <li><a href="{{ route('nma.home') }}#organizers">Organizers</a></li>
                 <!-- <li>
                     <a href="#">Organizers</a>

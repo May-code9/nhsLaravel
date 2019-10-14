@@ -69,4 +69,13 @@ class HomeController extends Controller
 
         return view('pages.about.secretariat', compact('about_secretariat', 'about'));
     }
+    public function accomodation()
+    {
+        $share = Share::page('https://www.nationalnma.org')
+            ->facebook()
+            ->twitter()
+            ->linkedin('Plan to attend')
+            ->whatsapp();
+        return view('pages.accomodation', compact('share'));
+    }
 }

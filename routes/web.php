@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/', ['as'=>'nma.home', 'uses'=>'HomeController@index']);
 Route::get('/speakers', ['as'=>'nma.speakers', 'uses'=>'HomeController@speakers']);
 Route::get('/contact', ['as'=>'nma.contacts', 'uses'=>'HomeController@contact']);
-
+Route::get('/accomodation', ['as'=>'nma.accomodation', 'uses'=>'HomeController@accomodation']);
 Route::get('/tickets', ['as'=>'nma.tickets' , 'uses'=>'AuthUser\RegisterController@showRegistrationForm']);
 Route::post('/tickets', ['as'=>'nma.tickets', 'uses'=>'AuthUser\RegisterController@register']);
 Route::get('/transaction', ['as'=>'nma.transaction', 'uses'=>'TransactionController@transaction'])->middleware('transaction');
