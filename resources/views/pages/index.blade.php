@@ -237,37 +237,45 @@
     </section>
 
     <section id="pricing" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="pricing-table wow fadeInLeft" data-wow-delay="0.3s">
-                        <h3>NMA President's Invitation</h3>
-
-                        <div class="button-area">
-                            <a href="{{ asset('pdf/President remarks on summit.pdf') }}" class="btn btn-common">Click to View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="pricing-table pricing-active wow fadeInDown" data-wow-delay="0.3s">
-                        <h3>CPC Chairman's Remark</h3>
-
-                        <div class="button-area">
-                            <a href="{{ asset('pdf/THE CHAIRMAN NHS 2019.pdf') }}" class="btn btn-common">Click to View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="pricing-table pricing-active wow fadeInDown" data-wow-delay="0.3s">
-                        <h3>LOC Chairman's Welcome Address</h3>
-
-                        <div class="button-area">
-                            <a href="{{ asset('pdf/EVENT BROCHURE OF THE 2ND NATIONAL HEALTH SUMMIT ABUJA 2019.pdf') }}" class="btn btn-common">Click to View</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-4 col-sm-12 col-xs-12" style="padding-right: 0; padding-left: 0">
+            <div class="pricing-table wow fadeInLeft" data-wow-delay="0.3s">
+              <h3>NMA President's Invitation</h3>
+              <p style="text-align: justify; padding: 0 15px">
+                <img src="assets/img/teacher/team-2.png" width="30%" height="auto" style="margin: 0 auto; border-radius: 50%;">
+              On behalf of the National Officers Committee, National Executive Council and all Nigerian Medical and Dental Practitioners, I am delighted to invite you to the 2nd Edition of the National Health Summit organized by the Nigerian Medical Association holding between 4th and 8th November 2019.</p>
+              <div class="button-area">
+                <a href="{{ asset('pdf/President remarks on summit.pdf') }}" class="btn btn-common">Read More</a>
+              </div>
             </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12" style="padding-right: 0; padding-left: 0">
+            <div class="pricing-table pricing-active wow fadeInDown" data-wow-delay="0.3s">
+              <h3>CPC Chairman's Remark</h3>
+              <p style="text-align: justify; padding: 0 15px">
+              <img src="assets/img/teacher/team-5.png" width="30%" height="auto" style="margin: 0 auto; border-radius: 50%;">
+              I am delighted as Chairman of the Central Planning Committee on behalf of the President and National Officers’ Committee of the Nigerian Medical Association (NMA) to respectfully invite you and your esteemed organisation to participate in the events of the 2nd National Health Summit (NHS) ...
+              </p>
+              <div class="button-area">
+                <a href="{{ asset('pdf/THE CHAIRMAN NHS 2019.pdf') }}" class="btn btn-common">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12" style="padding-right: 0; padding-left: 0">
+            <div class="pricing-table pricing-active wow fadeInDown" data-wow-delay="0.3s">
+              <h3>LOC Chairman's Welcome Address</h3>
+              <p style="text-align: justify; padding: 0 15px">
+                <img src="assets/img/teacher/team-6.png" width="30%" height="auto" style="margin: 0 auto; border-radius: 50%;">
+                Invitation to the 2nd National Health Summit (NHS) Abuja 2019. <br>It is my pleasure to invite you to the 2nd Nigeria Medical Association (NMA) National Health Summit (NHS) 2019, on behalf of the Local Organizing Committee.</p>
+              <div class="button-area">
+                <a href="{{ asset('pdf/EVENT BROCHURE OF THE 2ND NATIONAL HEALTH SUMMIT ABUJA 2019.pdf') }}" class="btn btn-common">Read More</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="organizers" class="section" style="background: url('assets/img/background/NOC-Group-pix.jpg'); background-size: contain;">
@@ -329,12 +337,28 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
                         <div class="team-desc">
+                            <h3>Guest of Honour</h3>
+                            <h5>His Excellency, Prof. Yemi Osinbajo.</h5>
+                            <p>Oluyemi Oluleke "Yemi" Osinbajo is the Vice President of Federal Republic of Nigeria.<a href="https://en.wikipedia.org/wiki/Yemi_Osinbajo" target="_blank"> Read More</a> </p>
+                        </div>
+                        <div class="team-img">
+                            <img src="assets/img/teacher/osibanjo.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-push-3 col-md-6 col-sm-12 col-xs-12">
+                    <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
+                         style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                        <div class="team-desc">
                             <h3>Chairman of the Occasion</h3>
-                            <h5>General Yakubu Gowon Rtd GcfR former head of state</h5>
+                            <h5>General Yakubu Gowon Rtd GcfR, former head of state</h5>
                             <p>General Yakubu "Jack" Dan-Yumma Gowon is the former head of
                                 state
                                 (Head of the Federal Military Government) of Nigeria from 1966 to 1975. <a href="https://en.wikipedia.org/wiki/Yakubu_Gowon" target="_blank">Read More</a> </p>
@@ -466,16 +490,16 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                         <div class="team-img">
+                            <img src="assets/img/teacher/team-2.png" alt="">
+
+                        </div>
                         <div class="team-desc">
                             <h3>Host</h3>
                             <h5>Dr. Francis Adebayo Faduyile</h5>
                             <p>Dr Faduyile is a highly experienced pathologist who has extensive experienced in care of
                                 patient with any tissue,body fluid related disease and cancer.He is also a forensic
                                 expert. He is the President of NMA </p>
-                        </div>
-                        <div class="team-img">
-                            <img src="assets/img/teacher/team-2.png" alt="">
-
                         </div>
                     </div>
                 </div>
@@ -499,14 +523,14 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                        <div class="team-img">
-                            <img src="assets/img/teacher/team-6.png" alt="">
-
-                        </div>
                         <div class="team-desc">
                             <h5>Dr. Ekpe Philips Uche</h5>
                             <h4>Chairman of LOC</h4>
                             <p>He is a Consultant Obstetrician Gynecologists, Medical Director of Nyanya General Hospital, CEO Guinea Savannah Medical Center & Chairman NMA-FCT</p>
+                        </div>
+                        <div class="team-img">
+                            <img src="assets/img/teacher/team-6.png" alt="">
+
                         </div>
                     </div>
                 </div>
@@ -530,6 +554,10 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                         <div class="team-img">
+                            <img src="assets/img/teacher/team-4.png" alt="">
+
+                        </div>
                         <div class="team-desc">
                             <h5>Dr. Osagie Ehanire</h5>
                             <p>Dr. Osagie E. Ehanire is an outstanding surgeon and holds an (MD) of college of Medicine,
@@ -538,11 +566,21 @@
                                 <a href="https://www.tydanjumafoundation.org/board-of-trustees/dr-osagie-e-ehanire"
                                    target="_blank">Read More</a></p>
                         </div>
-                        <div class="team-img">
-                            <img src="assets/img/teacher/team-4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
+                         style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                         <div class="team-img">
+                            <img src="assets/img/teacher/mamora.png" alt="">
 
                         </div>
-
+                        <div class="team-desc">
+                            <h5>Dr. Adeleke Mamora</h5>
+                            <p>Dr. Adeleke Olorunnimbe Mamora is the newly-appointed Nigerian Minister of State for Health. President Muhammadu Buhari inaugurated new ministers on 21st August 2019.
+                                <a href="https://healthguide.ng/nigerian-minister-of-state-health-adeleke-olorunnimbe-mamora/"
+                                   target="_blank">Read More</a></p>
+                        </div>
                     </div>
                 </div>
 

@@ -104,7 +104,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <!-- End Google Tag Manager (noscript) -->
 <div class="preloader-wrapper">
     <div class="preloader">
-        <img src="{{ asset('assets/img/nhs_logo.png') }}" width="90%" height="auto">
+        <img src="{{ asset('img/nhs_512.png') }}" width="100%" height="auto">
     </div>
 </div>
 
@@ -142,6 +142,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <script type="text/javascript">
     $(function () {
         var width = $('.width').width();
+        
         var div = 1;
         if (width < 760) {
             $('.smallScreen').slideDown('4000');
@@ -157,7 +158,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             $('.bigScreen').slideDown('4000');
             $('.headerForBigScreen').show();
             $('.headerForSmallScreen').remove();
-            
         }
         if (width < 900) {
             div = 7;
