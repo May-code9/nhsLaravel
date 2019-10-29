@@ -151,26 +151,35 @@
                                 <div class="wow fadeInLeft" data-wow-delay="0.1s">
 
                                     <h4 style="text-align:left">Expectations?</h4>
-                                    <p style="text-align:left; color: #000; font-size: 18px">This November, Abuja will host an epoch-making event
+                                    <div class="expectationsShort">
+                                        <p style="text-align:left; color: #000; font-size: 18px">This November, Abuja will host an epoch-making event
+                                            where stakeholders in Health will proffer solutions to the numerous challenges... <a href="javascript:;" data-id="expectations" class="showExpect">  Read More</a></p>
+                                    </div>
+                                    <div class="expectationsLong" style="display: none">
+                                        <p style="text-align:left; color: #000; font-size: 18px">This November, Abuja will host an epoch-making event
                                         where stakeholders in Health will proffer solutions to the numerous challenges
                                         in our dear country Nigeria. <br> Nigeria Medical Association is hosting its 2nd
                                         National Health Summit and delegates can expect:</p>
-                                    <ul style="color: #000; font-size: 18px">
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">Inspiring
-                                            keynote speakers with decades of experience in Health issues.
-                                        </li>
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">Interactive
-                                            communique sessions.
-                                        </li>
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">Informative
-                                            question and answer sessions.
-                                        </li>
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">New
-                                            breakthrough scientific sessions.
-                                        </li>
-                                    </ul>
-                                    <h5 style="text-align:left">Share this page</h5>
-                                    <div style="text-align: left">{!! $share !!}</div>
+                                        <ul style="color: #000; font-size: 18px">
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">Inspiring
+                                                keynote speakers with decades of experience in Health issues.
+                                            </li>
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">Interactive
+                                                communique sessions.
+                                            </li>
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">Informative
+                                                question and answer sessions.
+                                            </li>
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">New
+                                                breakthrough scientific sessions.
+                                            </li>
+                                        </ul>
+                                        <h5 style="text-align:left">Share this page</h5>
+                                        <div style="text-align: left">
+                                            {!! $share !!}
+                                        </div>
+                                        <a href="javascript:;" class="hideExpect" data-id="expectations" style="float: right; font-size: 19px; margin-top: -20px">  Read Less</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -182,17 +191,22 @@
                                 <div class=" wow fadeInLeft" data-wow-delay="0.2s">
 
                                     <h4 style="text-align:left">Why Attend?</h4>
-                                    <p style="text-align:left; color: #000; font-size: 18px">The National Health Summit has become a major event of the Nigerian Medical Association (NMA) held every five (5) years.
+                                    <div class="whyAttendShort">
+                                        <p style="text-align:left; color: #000; font-size: 18px">The National Health Summit has become a major event of the Nigerian Medical Association (NMA) held every five (5) years... <a href="javascript:;" data-id="whyAttend" class="showExpect"> Read More</a></p>
+                                    </div>
+                                    <div class="whyAttendLong" style="display: none">
+                                        <p style="text-align:left; color: #000; font-size: 18px">The National Health Summit has become a major event of the Nigerian Medical Association (NMA) held every five (5) years.
                                         It serves the strategic purpose of planning and policy formulation for the entire Nigerian Health Sector. </p>
-                                    <h5 style="color: #000; font-size: 18px">This has resulted in:</h5>
-                                    <ul style="color: #000; font-size: 18px">
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">Basic Healthcare Development Fund.</li>
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">National Health Act.</li>
-                                        <li style="list-style: circle; text-align: left;margin-left:10px">NMA Strategic Plan 2017 – 2022.</li>
-                                    </ul>
-                                    <h5 style="text-align:left">Share this page</h5>
-                                    <div style="text-align: left;">{!! $share !!}</div>
-
+                                        <h5 style="color: #000; font-size: 18px">This has resulted in:</h5>
+                                        <ul style="color: #000; font-size: 18px">
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">Basic Healthcare Development Fund.</li>
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">National Health Act.</li>
+                                            <li style="list-style: circle; text-align: left;margin-left:10px">NMA Strategic Plan 2017 – 2022.</li>
+                                        </ul>
+                                        <h5 style="text-align:left">Share this page</h5>
+                                        <div style="text-align: left;">{!! $share !!}</div>
+                                        <a href="javascript:;" class="hideExpect" data-id="whyAttend" style="float: right; font-size: 19px; margin-top: -20px"> Read Less</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -204,29 +218,45 @@
                                 <div class="wow fadeInLeft" data-wow-delay="0.2s">
 
                                     <h4 style="text-align:left">Who Should Attend?</h4>
-                                    <div class="col-md-6" style="color: #000; font-size: 18px">
-                                        <ul>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">All Stakeholders in the Health Sector.</li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Leaders in health care industries, Ministers, Permanent Secretaries. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Commissioners Directors of MDA (Ministries, Agencies and Parastatals). </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Health Students. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Patients, Health Journalist/Media. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">All Health Sector Workers. </li>
-                                        </ul>
+                                    <div class="whoShouldShort">
+                                        <div class="col-md-6" style="color: #000; font-size: 18px">
+                                            <ul>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">All Stakeholders in the Health Sector.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6" style="color: #000; font-size: 18px">
+                                            <ul style="color: #000; font-size: 18px">
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Dental practitioners. </li>
+                                            </ul>
+                                        </div>
+                                        <p><a href="javascript:;" data-id="whoShould" class="showExpect" style="font-size: 19px"> Read More</a></p>
                                     </div>
-                                    <div class="col-md-6">
-                                        <ul style="color: #000; font-size: 18px">
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Dental practitioners. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Pharmacist and Pharmaceuticals. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Nurses. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Medical laboratory Scientists. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">All Health workers at Primary, Secondary and Tertiary level. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Medical NGO’s. </li>
-                                            <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Health Unions and Associations.</li>
-                                        </ul>
+                                    <div class="whoShouldLong" style="display: none">
+                                        <div class="col-md-6" style="color: #000; font-size: 18px">
+                                            <ul>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">All Stakeholders in the Health Sector.</li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Leaders in health care industries, Ministers, Permanent Secretaries. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Commissioners Directors of MDA (Ministries, Agencies and Parastatals). </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Health Students. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Patients, Health Journalist/Media. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">All Health Sector Workers. </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul style="color: #000; font-size: 18px">
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Dental practitioners. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Pharmacist and Pharmaceuticals. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Nurses. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical laboratory Scientists. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">All Health workers at Primary, Secondary and Tertiary level. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical NGO’s. </li>
+                                                <li style="list-style: circle; text-align: left;margin-left:10px">Medical and Health Unions and Associations.</li>
+                                            </ul>
+                                        </div>
+                                        <h5 style="text-align:left">Share this page</h5>
+                                        <div style="text-align: left;">{!! $share !!}</div>
+                                        <a href="javascript:;" class="hideExpect" data-id="whoShould" style="float: right; font-size: 19px; margin-top: -20px"> Read Less</a>
                                     </div>
-                                    <h5 style="text-align:left">Share this page</h5>
-                                    <div style="text-align: left;">{!! $share !!}</div>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +269,7 @@
     <section id="pricing" class="section">
       <div class="container">
         <div class="row">
-          
+
           <div class="col-md-4 col-sm-12 col-xs-12" style="padding-right: 0; padding-left: 0">
             <div class="pricing-table wow fadeInLeft" data-wow-delay="0.3s">
               <h3>NMA President's Invitation</h3>
@@ -332,7 +362,7 @@
 
                         </div>
                         <div class="team-img">
-                            <img src="assets/img/teacher/img-3.png" alt="" style="background: none">
+                            <img src="assets/img/teacher/mohammadu_buhari.png" alt="" style="background: none">
 
                         </div>
                     </div>
@@ -347,7 +377,7 @@
                             <p>Oluyemi Oluleke "Yemi" Osinbajo is the Vice President of Federal Republic of Nigeria.<a href="https://en.wikipedia.org/wiki/Yemi_Osinbajo" target="_blank"> Read More</a> </p>
                         </div>
                         <div class="team-img">
-                            <img src="assets/img/teacher/osibanjo.png" alt="">
+                            <img src="assets/img/teacher/osibanjo_vp.png" alt="">
 
                         </div>
                     </div>
@@ -365,11 +395,9 @@
                         </div>
                         <div class="team-img">
                             <img src="assets/img/teacher/img-4.png" alt="">
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -444,6 +472,25 @@
         </div>
     </section>
 
+    <section id="intro" class="section">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center; margin-bottom: 10px">
+                <div class="content-text">
+                    <h2>NHS Conference App available</h2>
+                </div>
+              </div>
+                <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom: 10px">
+                  <a href="https://play.google.com/store/apps/details?id=com.evolveIT.nhsconference" target="_blank"><img src="assets\img\sponsors\Google play.png" class="img-responsive"></a>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 ">
+                  <a href="#"><img src="assets\img\sponsors\App Store.png" class="img-responsive"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="team" class="section gray-bg">
         <div class="container">
             <div class="row">
@@ -496,7 +543,7 @@
                         </div>
                         <div class="team-desc">
                             <h3>Host</h3>
-                            <h5>Dr. Francis Adebayo Faduyile</h5>
+                            <h5>Dr. Francis Adedayo Faduyile</h5>
                             <p>Dr Faduyile is a highly experienced pathologist who has extensive experienced in care of
                                 patient with any tissue,body fluid related disease and cancer.He is also a forensic
                                 expert. He is the President of NMA </p>
@@ -506,10 +553,19 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                        <div class="team-img">
-                            <img src="assets/img/teacher/team-5.png" alt="">
+                         <div class="team-img">
+                            <img src="assets/img/teacher/Osahon Enabulele.png" alt="">
 
                         </div>
+                        <div class="team-desc">
+                            <h5>Dr Osahon Enabulele</h5>
+                            <p>Dr Osahon Enabulele, past President of NMA & President Elect Commonwealth Medical Association.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
+                         style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
                         <div class="team-desc">
                             <!-- <h3>Host</h3> -->
                             <h5>Dr. Ofem Enang</h5>
@@ -517,6 +573,10 @@
                             <p>Dr Ofem Enang is a Consultant Physician/Endocrinologist with the University of Calabar Teaching Hospitals.
 
                                 </p>
+                        </div>
+                        <div class="team-img">
+                            <img src="assets/img/teacher/team-5.png" alt="">
+
                         </div>
                     </div>
                 </div>
@@ -554,10 +614,6 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                         <div class="team-img">
-                            <img src="assets/img/teacher/team-4.png" alt="">
-
-                        </div>
                         <div class="team-desc">
                             <h5>Dr. Osagie Ehanire</h5>
                             <p>Dr. Osagie E. Ehanire is an outstanding surgeon and holds an (MD) of college of Medicine,
@@ -566,13 +622,17 @@
                                 <a href="https://www.tydanjumafoundation.org/board-of-trustees/dr-osagie-e-ehanire"
                                    target="_blank">Read More</a></p>
                         </div>
+                        <div class="team-img">
+                            <img src="assets/img/teacher/team-4.png" alt="">
+
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-member wow fadeInLeft animated" data-wow-delay="0.2s"
                          style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
                          <div class="team-img">
-                            <img src="assets/img/teacher/mamora.png" alt="">
+                            <img src="assets/img/teacher/Adeleke Mamora.png" alt="">
 
                         </div>
                         <div class="team-desc">
@@ -583,7 +643,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

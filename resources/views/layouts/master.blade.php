@@ -138,11 +138,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <div class="bottom"><a href="#" class="settings"></a></div>
 
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.showExpect').on('click', function () {
+            var div = $(this).attr('data-id');
+            $('.'+div+'Short').hide();
+            $('.'+div+'Long').slideDown(700);
+        })
+        $('.hideExpect').on('click', function () {
+            var div = $(this).attr('data-id');
+            $('.'+div+'Short').slideDown(700);
+            $('.'+div+'Long').hide();
+        })
+    })
+</script>
 
 <script type="text/javascript">
     $(function () {
         var width = $('.width').width();
-        
+
         var div = 1;
         if (width < 760) {
             $('.smallScreen').slideDown('4000');
