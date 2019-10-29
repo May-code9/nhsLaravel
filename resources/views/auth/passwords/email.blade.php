@@ -18,6 +18,7 @@
                         @csrf
 
                         <div class="form-group row">
+                            <p class="col-md-12">Fill an email address you have access to and click send. Check your inbox or spam in your email, you will see a reset password link, click to reset password.</p>
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">

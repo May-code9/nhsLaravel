@@ -66,6 +66,16 @@
                                 <p class="label transition">Not registered? <a href="{{ route('nma.tickets') }}">Register
                                         Here</a></p>
                             </div>
+                            <br>
+                            <div class="col-md-6">
+                              @if (Route::has('password.request'))
+                                  <p class="label transition">
+                                    <a href="{{ route('password.request') }}">
+                                      {{ __('Forgot Your Password?') }}
+                                    </a>
+                                  </p>
+                              @endif
+                            </div>
                         </div>
                     </form>
                 </div>
