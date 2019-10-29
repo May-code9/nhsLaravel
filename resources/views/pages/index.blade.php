@@ -266,6 +266,28 @@
         </div>
     </section>
 
+    <section id="face_of_nhs" class="section" style="padding: 30px 0;background-color: #efefef;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class=" wow fadeInDown" data-wow-delay="0.3s">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="day1">
+                                <div class="row">
+                                    <div class="col-md-12 board text-center">
+                                        <div class="member stephen" style="padding-bottom: 1px; padding-top: 0">
+                                            <img src="{{ asset('assets/img/slider/face of nhs.jpg') }}" alt="cma" class="img-responsive" style="display: unset">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="pricing" class="section">
       <div class="container">
         <div class="row">
@@ -705,7 +727,7 @@
         </div>
     </section>
 
-    <section id="cma" class="section" style="padding: 30px 0">
+    <section id="cma" class="section" style="padding: 30px 0;background-color: #efefef;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
