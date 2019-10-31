@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use QrCode;
 use App\User;
 use Alert;
+use App\Hall;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -82,14 +83,22 @@ class UserController extends Controller
     {
         $allUsers = 'active';
         $indexUser = 'active';
-        $user = User::where('id', $id)->get()->last();
-        $username = $user->first_name . ' ' . $user->last_name . ', ' . $user->email;
-        $link = 'https://nmanationalhealthsummit.com/users/' . $id;
-        $qrcode = QrCode::size(400)->generate($link);
-        $qrcode2 = QrCode::size(300)->generate($link);
-        $status = transactionId($id);
+        $checkTransaction = Transaction::where('user_id', $id)->count();
 
-        return view('dashboard.body.user.iList', compact('allUsers', 'indexUser', 'qrcode', 'qrcode2', 'username', 'status'));
+        if($checkTransaction == 1) {
+          $user = User::where('id', $id)->get()->last();
+          $username = $user->first_name . ' ' . $user->last_name . ', ' . $user->email;
+          $link = 'https://nmanationalhealthsummit.com/users/' . $id;
+          $qrcode = QrCode::size(400)->generate($link);
+          $qrcode2 = QrCode::size(300)->generate($link);
+          $status = transactionId($id);
+          $getHalls = Hall::get();
+          return view('dashboard.body.user.iList', compact('allUsers', 'indexUser', 'qrcode', 'qrcode2', 'username', 'status', 'user', 'getHalls'));
+        }
+        else {
+          return redirect('/users')->with('warning_status', 'User has not completed transaction');
+        }
+
     }
 
     /**

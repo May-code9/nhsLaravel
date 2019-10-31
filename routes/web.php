@@ -52,4 +52,5 @@ Route::group(['middleware' => ['auth', 'adminauth']], function () {
 	Route::get('/exportAll/{type}', 'Admin\ExcelController@exportAll');
 	Route::resource('/addAdmin', 'Admin\AdminController');
 	Route::resource('/hall', 'Admin\HallController');
+	Route::resource('/attendance', 'Admin\AttendanceController');
 });

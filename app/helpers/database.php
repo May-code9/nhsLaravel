@@ -1,5 +1,6 @@
 <?php
 use App\Transaction;
+use App\Attendance;
 use App\Admin;
 use App\User;
 use Carbon\Carbon;
@@ -64,4 +65,13 @@ function amount() {
 
     return $amount;
 }
-
+function attendance($hall_id, $day, $user_id) {
+    $attendance = Attendance::where([['hall_id', $hall_id], ['day', $day], ['user_id', $user_id]])->count();
+    if($attendance > 0) {
+        $value = 1;
+    }
+    else {
+        $value = 0;
+    }
+    return $value;
+}
