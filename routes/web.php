@@ -43,12 +43,13 @@ Route::group(['middleware'=>'cors'], function()
 Route::get('/mobile/transaction/{email}', ['as'=>'nma.mobile.transaction', 'uses'=>'TransactionController@mobile_trans']);
 
 Route::group(['middleware' => ['auth', 'adminauth']], function () {
-   Route::get('/dashboard', ['as'=>'admin.dashboard', 'uses'=>'Admin\DashboardController@index']);
-   Route::resource('users', 'Admin\UserController');
-   Route::get('/update/payment/{id}', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment']);
-   Route::post('/update/payment', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment_post']);
-   Route::post('/search/users', ['as'=>'admin.search.users', 'uses'=>'Admin\SearchController@search_users']);
-   Route::get('/exportPaid/{type}', 'Admin\ExcelController@exportPaid');
-   Route::get('/exportAll/{type}', 'Admin\ExcelController@exportAll');
-    Route::resource('/addAdmin', 'Admin\AdminController');
+	Route::get('/dashboard', ['as'=>'admin.dashboard', 'uses'=>'Admin\DashboardController@index']);
+	Route::resource('users', 'Admin\UserController');
+	Route::get('/update/payment/{id}', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment']);
+	Route::post('/update/payment', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment_post']);
+	Route::post('/search/users', ['as'=>'admin.search.users', 'uses'=>'Admin\SearchController@search_users']);
+	Route::get('/exportPaid/{type}', 'Admin\ExcelController@exportPaid');
+	Route::get('/exportAll/{type}', 'Admin\ExcelController@exportAll');
+	Route::resource('/addAdmin', 'Admin\AdminController');
+	Route::resource('/hall', 'Admin\HallController');
 });

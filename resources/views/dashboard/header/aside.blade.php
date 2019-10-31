@@ -45,7 +45,19 @@
                                     href="{{ route('addAdmin.index') }}">View</a></li>
                     </ul>
                 </li>
-
+                <li class="sub-menu">
+                    <a href="javascript:;" class="@if (isset($hall)) {{$hall}} @endif">
+                        <i class="fa fa-building-o"></i>
+                        <span>Hall</span>
+                    </a>
+                    <ul class="sub">
+                        <li class="@if (isset($addHall)) {{$addHall}} @endif"><a
+                                    href="{{ route('hall.create') }}">Add Hall</a></li>
+                        <li class="@if (isset($viewHall)) {{$viewHall}} @endif"><a
+                                    href="{{ route('hall.index') }}">View Hall</a></li>
+                    </ul>
+                </li>
+                
                 <li>
                     <a class="@if (isset($branches)) {{$branches}} @endif" href="#">
                         <i class="fa fa-sitemap"></i>
