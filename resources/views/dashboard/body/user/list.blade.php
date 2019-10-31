@@ -22,7 +22,7 @@
                     @endif
                     {{ $listUsers->links() }}
                         @if(adminStatus() > 2)
-                        <section class="card col-lg-12">
+                        <section class="card col-lg-12 bigScreen">
                             <header class="card-header">
                                 <a href="/exportPaid/xlsx" class="btn btn-success">Export Registered Users to .xlsx</a>
                                 <a href="/exportAll/xlsx" class="btn btn-primary" style="margin-left: 10px">Export All Users to .xlsx</a>
@@ -34,7 +34,7 @@
                             <div class="top-nav ">
                                 Total User(s): <strong>{{ allUser() }}, </strong>Paid User(s): <strong>{{ countTransaction() }}</strong>
                                 <!--search & user info start-->
-                                <ul class="nav pull-right top-menu">
+                                <ul class="nav pull-right top-menu bigScreen">
                                     <li>
                                         <form id="searchUsers" class="form-horizontal" action="{{ route('admin.search.users') }}" method="POST">
                                             @csrf
@@ -53,57 +53,60 @@
                                 <!--search & user info end-->
                             </div>
                         </header>
-                        <table class="table table-striped table-advance table-hover">
-                            <thead>
-                            <tr>
-                                <th><i class="fa fa-sort-numeric-asc"></i> S/N</th>
-                                <th><i class="fa fa-users"></i> User Full Name</th>
-                                <th><i class="fa fa-envelope"></i></i> Email</th>
-                                <th><i class="fa fa-phone-square"></i></i> Phone</th>
-                                <th><i class="fa fa-star-half-full"></i></i> Status</th>
-                                <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
-                                <th><i class="fa fa-camera-retro"></i> QR Code</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @forelse($listUsers as $listUser)
-                                <tr>
-                                    <td>{{ $listUser->id }}</td>
-                                    <td>{{ $listUser->first_name }} {{ $listUser->last_name }}</td>
-                                    <td>{{ $listUser->email }}</td>
-                                    <td>{{ $listUser->phone }}</td>
-                                    <td>
-                                        @if(transactionId($listUser->id) == 0)
-                                            Not Completed <br> <a href="update/payment/{{ $listUser->id }}">update</a>
-                                        @else
-                                            Completed
-                                        @endif
-                                    </td>
-                                    <td>{{ $listUser->created_at }}</td>
-                                    @if(transactionId($listUser->id) == 1)
-                                    <td class=""><a href="/users/{{$listUser->id}}"
-                                                    class="btn btn-sm btn-primary mr-2">View</a></td>
-                                        @else
-                                    <td><a href="#">No QR</a> </td>
-                                        @endif
-                                </tr>
-                            @empty
-                                <div><h1>No User Yet</h2></div>
-                            @endforelse
+                        <div style="overflow-x:auto;">
+                          <table class="table table-striped table-advance table-hover">
+                              <thead>
+                              <tr>
+                                  <th><i class="fa fa-sort-numeric-asc"></i> S/N</th>
+                                  <th><i class="fa fa-users"></i> User Full Name</th>
+                                  <th><i class="fa fa-envelope"></i></i> Email</th>
+                                  <th><i class="fa fa-phone-square"></i></i> Phone</th>
+                                  <th><i class="fa fa-star-half-full"></i></i> Status</th>
+                                  <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
+                                  <th><i class="fa fa-camera-retro"></i> QR Code</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              @forelse($listUsers as $listUser)
+                                  <tr>
+                                      <td>{{ $listUser->id }}</td>
+                                      <td>{{ $listUser->first_name }} {{ $listUser->last_name }}</td>
+                                      <td>{{ $listUser->email }}</td>
+                                      <td>{{ $listUser->phone }}</td>
+                                      <td>
+                                          @if(transactionId($listUser->id) == 0)
+                                              Not Completed <br> <a href="update/payment/{{ $listUser->id }}">update</a>
+                                          @else
+                                              Completed
+                                          @endif
+                                      </td>
+                                      <td>{{ $listUser->created_at }}</td>
+                                      @if(transactionId($listUser->id) == 1)
+                                      <td class=""><a href="/users/{{$listUser->id}}"
+                                                      class="btn btn-sm btn-primary mr-2">View</a></td>
+                                          @else
+                                      <td><a href="#">No QR</a> </td>
+                                          @endif
+                                  </tr>
+                              @empty
+                                  <div><h1>No User Yet</h2></div>
+                              @endforelse
 
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <th><i class="fa fa-sort-numeric-asc"></i> S/N</th>
-                                <th><i class="fa fa-user-secret"></i> User Full Name</th>
-                                <th><i class="fa fa-envelope-square"></i></i> Email</th>
-                                <th><i class="fa fa-phone-square"></i></i> Phone</th>
-                                <th><i class="fa fa-star-half-full"></i></i> Status</th>
-                                <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
-                                <th><i class="fa fa-camera-retro"></i> QR Code</th>
-                            </tr>
-                            </tfoot>
-                        </table>
+                              </tbody>
+                              <tfoot>
+                              <tr>
+                                  <th><i class="fa fa-sort-numeric-asc"></i> S/N</th>
+                                  <th><i class="fa fa-user-secret"></i> User Full Name</th>
+                                  <th><i class="fa fa-envelope-square"></i></i> Email</th>
+                                  <th><i class="fa fa-phone-square"></i></i> Phone</th>
+                                  <th><i class="fa fa-star-half-full"></i></i> Status</th>
+                                  <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
+                                  <th><i class="fa fa-camera-retro"></i> QR Code</th>
+                              </tr>
+                              </tfoot>
+                          </table>
+                        </div>
+
                     </section>
 
                 </div>

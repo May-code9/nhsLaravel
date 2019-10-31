@@ -52,12 +52,12 @@
                         <span>Transactions</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a class="@if (isset($reg)) {{$reg}} @endif" href="#">
                         <i class="fa fa-money"></i>
                         <span>Registration Fees</span>
                     </a>
-                </li>
+                </li> -->
                 <hr style="background-color: #9e9e9e">
 
             @endif

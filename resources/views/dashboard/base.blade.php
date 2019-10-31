@@ -52,5 +52,28 @@
   @include('dashboard.footer.data.buy')
   @endif
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    var wSize = $('#container').width();
+    //console.log(wSize);
+    if (wSize <= 768) {
+        $('#container').addClass('sidebar-close');
+        $('#sidebar > ul').hide();
+        $('.logoLeft').css('left','34%');
+    }
+    else {
+      $('.logoLeft').css('left','41%');
+    }
+  })
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var bigScreen = $('.bigScreen').width();
+
+    if(bigScreen < 768) {
+      $('.bigScreen').hide();
+    }
+  })
+</script>
 </body>
 </html>
