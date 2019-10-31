@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/', ['as'=>'nma.home', 'uses'=>'HomeController@index']);
 Route::get('/speakers', ['as'=>'nma.speakers', 'uses'=>'HomeController@speakers']);
+Route::get('/schedule', ['as'=>'nma.schedule', 'uses'=>'HomeController@schedule']);
 Route::get('/contact', ['as'=>'nma.contacts', 'uses'=>'HomeController@contact']);
 Route::get('/accomodation', ['as'=>'nma.accomodation', 'uses'=>'HomeController@accomodation']);
 Route::get('/tickets', ['as'=>'nma.tickets' , 'uses'=>'AuthUser\RegisterController@showRegistrationForm']);
@@ -34,7 +35,7 @@ Route::post('/userPayment', 'TransactionController@userPayment')->name('userPaym
 Route::group(['middleware'=>'cors'], function()
 {
 	Route::apiResource('/api/register', 'Api\Register');
-	Route::apiResource('/api/login', 'Api\UserLogin');	
+	Route::apiResource('/api/login', 'Api\UserLogin');
 	Route::get('/api/getUser/{email}', 'Api\GetController@getUser');
 	Route::post('/api/deleteLogin/{email}', 'Api\GetController@deleteLogin');
 });

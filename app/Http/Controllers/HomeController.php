@@ -26,6 +26,11 @@ class HomeController extends Controller
 
         return view('pages.index', compact('index', 'share'));
     }
+    public function schedule()
+    {
+      $schedule = 'active';
+      return view('pages.schedule', compact('schedule'));
+    }
     public function speakers()
     {
       $speakers = 'active';

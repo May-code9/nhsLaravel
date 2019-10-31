@@ -36,7 +36,9 @@
                                 <li><a href="#">Secretariat Members</a> </li>
                             </ul>
                         </li> -->
-                        <li><a href="{{ route('nma.home') }}#schedule" style="margin-top: 12px; margin-bottom:0">Schedule</a></li>
+                        @if(Route::currentRouteName() != 'nma.schedule')
+                        <li><a href="{{ route('nma.schedule') }}" style="margin-top: 12px; margin-bottom:0">Schedule</a></li>
+                        @endif
                         @if(Route::currentRouteName() == 'nma.speakers')
                         <li><a href="{{ route('nma.home') }}#speakers" style="margin-top: 12px; margin-bottom:0">Speakers</a>
                         </li>
@@ -103,7 +105,7 @@
                         <li><a href="{{ route('nma.about.secretariat') }}">Secretariat Members</a> </li>
                     </ul>
                 </li> -->
-                <li><a href="{{ route('nma.home') }}#schedule">Schedule</a></li>
+                <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
                 <li><a href="{{ route('nma.home') }}#speakers">Speakers</a></li>
                 <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a></li>
                 @guest

@@ -30,7 +30,7 @@
                                 <li><a href="#">Secretariat Members</a> </li>
                             </ul>
                         </li> -->
-                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
                         <li><a href="#speakers">Speakers</a>
                         </li>
                         <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a>
@@ -91,7 +91,7 @@
                         <li><a href="#">Secretariat Members</a> </li>
                     </ul>
                 </li> -->
-                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
                 <li><a href="#speakers">Speakers</a></li>
                 <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a>
                 </li>

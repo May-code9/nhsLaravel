@@ -792,7 +792,7 @@ fieldset[disabled] .btn {
 }
 .main-board .day > li > a {
   color: #777777;
-  padding: 8px 106.9px;
+  padding: 8px 75.9px;
   margin-right: 0px;
   font-weight: 400;
   border: none;
@@ -875,6 +875,9 @@ fieldset[disabled] .btn {
 .column-1 .nav-pills ul > li.color-4:after {
   background: #4a5dcd;
 }
+.column-1 .nav-pills ul > li.color-5:after {
+  background: #ccca4b;
+}
 .column-1 .nav-pills ul > li > a {
   background: #dddddd;
   color: #777777;
@@ -921,6 +924,12 @@ fieldset[disabled] .btn {
 }
 .board .member .bg-3 {
   background: #2239c2;
+}
+.board .member .bg-4 {
+  background: #ccca4b;
+}
+.board .member .bg-5 {
+  background: #736357;
 }
 .board .jon p {
   margin: 40px 0;
