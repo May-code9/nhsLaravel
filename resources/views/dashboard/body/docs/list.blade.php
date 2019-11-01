@@ -24,38 +24,38 @@ Picture | List
 
         <section class="card col-lg-12">
           <header class="card-header">
-            Total Picture File(s): <strong>{{ allPictures() }}</strong>
+            Total Document File(s): <strong>{{ allDocs() }}</strong>
           </header>
           <table class="table table-striped table-advance table-hover">
             <thead>
               <tr>
                 <th><i class="fa fa-table"></i> Title</th>
                 <th></th>
-                <th><i class="fa fa-file"></i></i> Image </th>
+                <th><i class="fa fa-file"></i></i> Document(s) </th>
                 <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
               </tr>
             </thead>
             <tbody>
-              @forelse($listpictures as $listpicture)
+              @forelse($listDocs as $listDoc)
               <tr>
-                <td>{{ $listpicture->title }}</td>
-                <td class=""><a href="/pictureUpload/{{$listpicture->id}}/edit" class="btn btn-md btn-primary mr-2">Edit</a></td>
+                <td>{{ $listDoc->title }}</td>
+                <td class=""><a href="/pictureUpload/{{$listDoc->id}}/edit" class="btn btn-md btn-primary mr-2">Edit</a></td>
                 <td>
-                  <div><img src="{{asset('picture/' . $listpicture->image)}}" width="80" height="auto"></div>
-                  <div><a href="/Edit Picture/{{$listpicture->id}}">edit</a></div>
+                  <div><a href="{{asset('docs/' . $listDoc->pdf)}}">view</a></div>
+                  <div><a href="/Edit Picture/{{$listDoc->id}}">edit</a></div>
                 </td>
-                <td>{{ $listpicture->dater }}</td>
+                <td>{{ $listDoc->dater }}</td>
               </tr>
               @empty
-              <center><h1>No picture Yet</h2></center>
-                @endforelse
+              <h1>No Document Yet</h2>
+              @endforelse
 
               </tbody>
               <tfoot>
                 <tr>
                   <th><i class="fa fa-table"></i> Title</th>
                   <th></th>
-                  <th><i class="fa fa-file"></i></i> Image </th>
+                  <th><i class="fa fa-file"></i></i> Document(s) </th>
                   <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
                 </tr>
               </tfoot>

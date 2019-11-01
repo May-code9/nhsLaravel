@@ -1,6 +1,6 @@
 @extends('dashboard.base')
 @section('title')
-Picture | Create
+Docs | Create
 @endsection
 @section('content')
 <section id="main-content">
@@ -9,7 +9,7 @@ Picture | Create
     <div class="row">
       <div class="col-lg-8 push-1">
         <section class="card">
-          <div class="card-header">Upload Picture</div>
+          <div class="card-header">Upload Docs</div>
           <div class="card-body">
 
             @if(session('success_status'))
@@ -22,12 +22,12 @@ Picture | Create
               {{ session('warning_status') }}
             </div>
             @endif
-            <form class="form-horizontal" role="form" method="POST" action="{{ route('pictureUpload.store') }}" enctype="multipart/form-data">
+            <form class="form-horizontal" role="form" method="POST" action="{{ route('docsUpload.store') }}" enctype="multipart/form-data">
               @csrf
               <div class="form-row">
                 <div class="col-md-12 mb-3">
-                  <label for="picture_title">Picture Title</label>
-                  <input type="text" class="form-control" id="title" placeholder="picture Title Here" name="title" required>
+                  <label for="title">Document Title</label>
+                  <input type="text" class="form-control" id="title" placeholder="Document Title Here" name="title" required>
                   @if ($errors->has('title'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('title') }}</strong>
@@ -38,10 +38,10 @@ Picture | Create
 
               <div class="form-row">
                 <div class="col-md-12 mb-3">
-                  <label for="picture_file">Picture File</label>
+                  <label for="pdf">Picture File</label>
                   <div class="custom-file">
-                    <label class="custom-file-label" for="picture_file">Choose Picture file</label>
-                    <input type="file" class="custom-file-input" id="image" name="image" required />
+                    <label class="custom-file-label" for="pdf">Choose Document file</label>
+                    <input type="file" class="custom-file-input" id="pdf" name="pdf" required />
                   </div>
                 </div>
               </div>

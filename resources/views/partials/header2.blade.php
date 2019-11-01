@@ -37,8 +37,14 @@
                             </ul>
                         </li> -->
                         @if(Route::currentRouteName() != 'nma.schedule')
-                        <li><a href="{{ route('nma.schedule') }}" style="margin-top: 12px; margin-bottom:0">Schedule</a></li>
+                        <li><a href="{{ route('nma.schedule') }}" style="margin-top: 12px; margin-bottom:0">Program</a></li>
                         @endif
+                        <li class="@if(isset($docs)) {{$docs}} @endif dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-top: 12px; margin-bottom:0">Docs <span class="caret"></span></a>
+                          <ul class="dropdown-menu" style="margin-top: -27px">
+                            <li class="@if(isset($pdf)) {{$pdf}} @endif"><a href="{{ route('nma.docs.pdf') }}">PDFs &amp; docs</a></li>
+                            <li class="@if(isset($gallery)) {{$gallery}} @endif"><a href="{{ route('nma.docs.gallery') }}">Images</a></li>
+                          </ul>
+                        </li>
                         @if(Route::currentRouteName() == 'nma.speakers')
                         <li><a href="{{ route('nma.home') }}#speakers" style="margin-top: 12px; margin-bottom:0">Speakers</a>
                         </li>
@@ -105,7 +111,13 @@
                         <li><a href="{{ route('nma.about.secretariat') }}">Secretariat Members</a> </li>
                     </ul>
                 </li> -->
-                <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
+                <li><a href="{{ route('nma.schedule') }}">Program</a></li>
+                <li><a href="#">Docs</a>
+                  <ul class="dropdown">
+                    <li><a href="#">PDFs &amp; Docs</a></li>
+                    <li><a href="#">Images</a></li>
+                  </ul>
+                </li>
                 <li><a href="{{ route('nma.home') }}#speakers">Speakers</a></li>
                 <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a></li>
                 @guest

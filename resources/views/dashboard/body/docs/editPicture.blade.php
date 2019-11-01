@@ -1,6 +1,6 @@
 @extends('dashboard.base')
 @section('title')
-Picture | Create
+Picture | Edit Full
 @endsection
 @section('content')
 <section id="main-content">
@@ -9,7 +9,7 @@ Picture | Create
     <div class="row">
       <div class="col-lg-8 push-1">
         <section class="card">
-          <div class="card-header">Upload Picture</div>
+          <div class="card-header">Edit Picture</div>
           <div class="card-body">
 
             @if(session('success_status'))
@@ -22,17 +22,14 @@ Picture | Create
               {{ session('warning_status') }}
             </div>
             @endif
-            <form class="form-horizontal" role="form" method="POST" action="{{ route('pictureUpload.store') }}" enctype="multipart/form-data">
+
+            <form class="form-horizontal" role="form" method="POST" action="/Edit Picture/{{$editFull->id}}" enctype="multipart/form-data">
               @csrf
+
               <div class="form-row">
                 <div class="col-md-12 mb-3">
                   <label for="picture_title">Picture Title</label>
-                  <input type="text" class="form-control" id="title" placeholder="picture Title Here" name="title" required>
-                  @if ($errors->has('title'))
-                  <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('title') }}</strong>
-                  </span>
-                  @endif
+                  <input type="text" class="form-control" value="{{ $editFull->picture_title }}" disabled>
                 </div>
               </div>
 
@@ -41,12 +38,13 @@ Picture | Create
                   <label for="picture_file">Picture File</label>
                   <div class="custom-file">
                     <label class="custom-file-label" for="picture_file">Choose Picture file</label>
-                    <input type="file" class="custom-file-input" id="image" name="image" required />
+                    <input type="file" class="custom-file-input" id="picture_file" name="picture_file" required />
                   </div>
                 </div>
               </div>
 
               <button class="btn btn-primary" type="submit">Upload</button>
+              <a class="btn btn-primary right" href="{{ route('pictureUpload.index') }}"> Back</a>
             </form>
 
           </div>

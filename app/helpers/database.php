@@ -3,6 +3,8 @@ use App\Transaction;
 use App\Attendance;
 use App\Admin;
 use App\User;
+use App\Pdf;
+use App\Picture;
 use Carbon\Carbon;
 
 function transaction() {
@@ -74,4 +76,14 @@ function attendance($hall_id, $day, $user_id) {
         $value = 0;
     }
     return $value;
+}
+function allPictures()
+{
+	$getAllPictures = Picture::count();
+	return $getAllPictures;
+}
+function allDocs()
+{
+	$getAllDocs = Pdf::count();
+	return $getAllDocs;
 }

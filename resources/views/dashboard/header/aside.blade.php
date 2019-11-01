@@ -57,12 +57,37 @@
                                     href="{{ route('hall.index') }}">View Hall</a></li>
                     </ul>
                 </li>
-                
+
                 <li>
                     <a class="@if (isset($branches)) {{$branches}} @endif" href="#">
                         <i class="fa fa-sitemap"></i>
                         <span>Transactions</span>
                     </a>
+                </li>
+                <hr style="background-color: #9e9e9e">
+                <li class="sub-menu">
+                    <a href="javascript:;" class="@if (isset($docs)) {{$docs}} @endif">
+                        <i class="fa fa-book"></i>
+                        <span>PDFs &amp; Docs</span>
+                    </a>
+                    <ul class="sub">
+                        <li class="@if (isset($addDocs)) {{$addDocs}} @endif"><a
+                                    href="{{ route('docsUpload.create') }}">Add</a></li>
+                        <li class="@if (isset($viewDocs)) {{$viewDocs}} @endif"><a
+                                    href="{{ route('docsUpload.index') }}">View</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="@if (isset($images)) {{$images}} @endif">
+                        <i class="fa fa-user"></i>
+                        <span>Images</span>
+                    </a>
+                    <ul class="sub">
+                        <li class="@if (isset($addimages)) {{$addimages}} @endif"><a
+                                    href="{{ route('pictureUpload.create') }}">Add</a></li>
+                        <li class="@if (isset($viewimages)) {{$viewimages}} @endif"><a
+                                    href="{{ route('pictureUpload.index') }}">View</a></li>
+                    </ul>
                 </li>
                 <!-- <li>
                     <a class="@if (isset($reg)) {{$reg}} @endif" href="#">

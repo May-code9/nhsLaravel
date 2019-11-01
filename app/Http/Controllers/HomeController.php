@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Share;
 use QrCode;
+use App\Pdf;
+use App\Picture;
 
 class HomeController extends Controller
 {
@@ -82,5 +84,21 @@ class HomeController extends Controller
             ->linkedin('Plan to attend')
             ->whatsapp();
         return view('pages.accomodation', compact('share'));
+    }
+    public function docs_gallery()
+    {
+      $gallery = 'active';
+      $docs = 'active';
+      $getPictures = Picture::orderBy('created_at', 'desc')->get();
+
+      return view('pages.gallery', compact('gallery', 'docs', 'getPictures'));
+    }
+    public function docs_pdf()
+    {
+      $pdf = 'active';
+      $docs = 'active';
+      $getDocs = Pdf::orderBy('created_at', 'desc')->get();
+
+      return view('pages.pdf_docs', compact('pdf', 'docs', 'getDocs'));
     }
 }

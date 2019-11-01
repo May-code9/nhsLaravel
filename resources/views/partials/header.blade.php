@@ -30,7 +30,13 @@
                                 <li><a href="#">Secretariat Members</a> </li>
                             </ul>
                         </li> -->
-                        <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
+                        <li><a href="{{ route('nma.schedule') }}">Program</a></li>
+                        <li class="@if(isset($docs)) {{$docs}} @endif dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li class="@if(isset($pdf)) {{$pdf}} @endif"><a href="{{ route('nma.docs.pdf') }}">PDFs &amp; docs</a></li>
+                            <li class="@if(isset($gallery)) {{$gallery}} @endif"><a href="{{ route('nma.docs.gallery') }}">Images</a></li>
+                          </ul>
+                        </li>
                         <li><a href="#speakers">Speakers</a>
                         </li>
                         <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a>
@@ -91,7 +97,13 @@
                         <li><a href="#">Secretariat Members</a> </li>
                     </ul>
                 </li> -->
-                <li><a href="{{ route('nma.schedule') }}">Schedule</a></li>
+                <li><a href="{{ route('nma.schedule') }}">Program</a></li>
+                <li><a href="#">Docs</a>
+                  <ul class="dropdown">
+                    <li><a href="#">PDFs &amp; Docs</a></li>
+                    <li><a href="#">Images</a></li>
+                  </ul>
+                </li>
                 <li><a href="#speakers">Speakers</a></li>
                 <li class="@if(isset($contact)) {{ $contact }} @endif"><a href="{{ route('nma.contacts') }}">Contact</a>
                 </li>

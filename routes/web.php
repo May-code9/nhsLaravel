@@ -30,6 +30,8 @@ Route::get('/about/noc', ['as'=>'nma.about.noc', 'uses'=>'HomeController@about_n
 Route::get('/about/cpc', ['as'=>'nma.about.cpc', 'uses'=>'HomeController@about_cpc']);
 Route::get('/about/loc', ['as'=>'nma.about.loc', 'uses'=>'HomeController@about_loc']);
 Route::get('/about/secretariat', ['as'=>'nma.about.secretariat', 'uses'=>'HomeController@about_secretariat']);
+Route::get('/docs/gallery', ['as'=>'nma.docs.gallery', 'uses'=>'HomeController@docs_gallery']);
+Route::get('/docs/pdf_docs', ['as'=>'nma.docs.pdf', 'uses'=>'HomeController@docs_pdf']);
 Route::get('/account', ['as'=>'nma.account', 'uses'=>'AccountController@account']);
 Route::post('/userPayment', 'TransactionController@userPayment')->name('userPayment');
 Route::group(['middleware'=>'cors'], function()
@@ -53,4 +55,6 @@ Route::group(['middleware' => ['auth', 'adminauth']], function () {
 	Route::resource('/addAdmin', 'Admin\AdminController');
 	Route::resource('/hall', 'Admin\HallController');
 	Route::resource('/attendance', 'Admin\AttendanceController');
+	Route::resource('/pictureUpload', 'Admin\ImageController');
+	Route::resource('/docsUpload', 'Admin\PdfController');
 });
