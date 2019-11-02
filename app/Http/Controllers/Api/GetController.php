@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Pdf;
 use App\User;
 use App\Login;
+use App\Picture;
 use App\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -54,5 +56,19 @@ class GetController extends Controller
             'message' => 'User Logged Out',
         );
         return response($response);
+    }
+
+    public function getImages()
+    {
+      $getImages = Picture::orderBy('created_at', 'desc')->get();
+
+      return response($getImages);
+    }
+
+    public function getPdfs()
+    {
+      $getPdfs = Pdf::orderBy('created_at', 'desc')->get();
+
+      return response($getPdfs);
     }
 }

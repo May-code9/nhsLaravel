@@ -40,6 +40,8 @@ Route::group(['middleware'=>'cors'], function()
 	Route::apiResource('/api/login', 'Api\UserLogin');
 	Route::get('/api/getUser/{email}', 'Api\GetController@getUser');
 	Route::post('/api/deleteLogin/{email}', 'Api\GetController@deleteLogin');
+	Route::get('/api/getImages', 'Api\GetController@getImages');
+	Route::get('/api/getPdfs', 'Api\GetController@getPdfs');
 });
 
 Route::get('/mobile/transaction/{email}', ['as'=>'nma.mobile.transaction', 'uses'=>'TransactionController@mobile_trans']);
