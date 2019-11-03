@@ -13,7 +13,7 @@
 /* ==========================================================================
    countdown timer
    ========================================================================== */
- jQuery('#clock').countdown('2019/11/04',function(event){
+ jQuery('#clock').countdown('2019/11/05',function(event){
   var $this=jQuery(this).html(event.strftime(''
   +'<div class="time-entry days"><span>%-D</span> Days</div> '
   +'<div class="time-entry hours"><span>%H</span> Hours</div> '
@@ -21,7 +21,7 @@
   +'<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
 });
 
-jQuery('#late').countdown('2019/11/03',function(event){
+jQuery('#late').countdown('2019/11/04',function(event){
     var $this=jQuery(this).html(event.strftime(''
         +'<div class="time-entry days"><span>%-D</span> Days</div> '
         +'<div class="time-entry hours"><span>%H</span> Hours</div> '

@@ -58,7 +58,7 @@ function amount() {
     if($convertedNowDate <= $convertedEarly) {
         $amount = 20000;
     }
-    elseif($convertedNowDate > $convertedEarly && $convertedNowDate < $convertedLate) {
+    elseif($convertedNowDate > $convertedEarly && $convertedNowDate <= $convertedLate) {
         $amount = 25000;
     }
     elseif ($convertedNowDate >= $convertedOnSite) {
