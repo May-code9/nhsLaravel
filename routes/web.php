@@ -42,6 +42,7 @@ Route::group(['middleware'=>'cors'], function()
 	Route::post('/api/deleteLogin/{email}', 'Api\GetController@deleteLogin');
 	Route::get('/api/getImages', 'Api\GetController@getImages');
 	Route::get('/api/getPdfs', 'Api\GetController@getPdfs');
+	Route::get('/api/getQrcode/{email}/{height}', 'Api\GetController@getQrcode');
 });
 
 Route::get('/mobile/transaction/{email}', ['as'=>'nma.mobile.transaction', 'uses'=>'TransactionController@mobile_trans']);

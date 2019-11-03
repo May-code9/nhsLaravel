@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use QrCode;
 use App\Pdf;
 use App\User;
 use App\Login;
@@ -70,5 +71,14 @@ class GetController extends Controller
       $getPdfs = Pdf::orderBy('created_at', 'desc')->get();
 
       return response($getPdfs);
+    }
+    public function getQrcode($email, $height)
+    {
+      $user = User::where('email', $email)->get()->last();
+      $id = $user->id;
+      $link = 'https://nmanationalhealthsummit.com/users/' . $id;
+      $userQrcode = QrCode::size($height)->generate($link);
+
+      return response($userQrcode);
     }
 }
