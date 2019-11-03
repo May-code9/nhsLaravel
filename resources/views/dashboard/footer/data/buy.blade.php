@@ -6,6 +6,23 @@
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="{{asset('js/jquery.js')}}"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var tagWidth = $('#tagWidth').width();
+      var nameWidth = $('#nameWidth').width();
+
+      var diff = (tagWidth - nameWidth)/2;
+      var percentage = (diff/tagWidth) * 100;
+      var addPercentage = percentage + '%';
+
+      $('#nameWidth').css('left', addPercentage);
+
+      var screenSize = $('#screenSize').width();
+      if(screenSize < 768) {
+        $('.forBigScreen').hide();
+      }
+    });
+  </script>
 
     <script>
       $(function () {

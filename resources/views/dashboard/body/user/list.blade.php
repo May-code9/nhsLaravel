@@ -20,7 +20,9 @@
                             {{ session('warning_status') }}
                         </div>
                     @endif
+                    @if(Route::currentRouteName() == 'users.index')
                     {{ $listUsers->links() }}
+                    @endif
                         @if(adminStatus() > 2)
                         <section class="card col-lg-12 bigScreen">
                             <header class="card-header">
@@ -36,7 +38,7 @@
                                 <!--search & user info start-->
                                 <ul class="nav pull-right top-menu bigScreen">
                                     <li>
-                                        <form id="searchUsers" class="form-horizontal" action="{{ route('admin.search.users') }}" method="POST">
+                                        <form id="searchUsers" class="form-horizontal" action="{{ route('admin.search.users') }}" method="GET">
                                             @csrf
                                             <div class="form-row">
                                                 <div class="col-md-8 mb-3">
@@ -82,8 +84,14 @@
                                       </td>
                                       <td>{{ $listUser->created_at }}</td>
                                       @if(transactionId($listUser->id) == 1)
-                                      <td class=""><a href="/users/{{$listUser->id}}"
-                                                      class="btn btn-sm btn-primary mr-2">View</a></td>
+                                      <td class="">
+                                        <a href="/users/{{$listUser->id}}" class="btn btn-sm btn-primary mr-2">View</a>
+                                        @if(certificate($listUser->id) == 0)
+                                        <a href="/certificate/create/{{$listUser->id}}" class="btn btn-sm btn-default mr-2"><i class="fa fa-camera-retro"></i></a>
+                                        @else
+                                        <a href="/certificate/edit/{{$listUser->id}}" class="btn btn-sm btn-success mr-2"><i class="fa fa-camera-retro"></i></a>
+                                        @endif
+                                      </td>
                                           @else
                                       <td><a href="#">No QR</a> </td>
                                           @endif

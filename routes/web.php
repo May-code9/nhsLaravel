@@ -52,7 +52,7 @@ Route::group(['middleware' => ['auth', 'adminauth']], function () {
 	Route::resource('users', 'Admin\UserController');
 	Route::get('/update/payment/{id}', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment']);
 	Route::post('/update/payment', ['as'=> 'update.payment', 'uses'=>'Admin\UpdatePaymentController@updatePayment_post']);
-	Route::post('/search/users', ['as'=>'admin.search.users', 'uses'=>'Admin\SearchController@search_users']);
+	Route::get('/search/users', ['as'=>'admin.search.users', 'uses'=>'Admin\SearchController@search_users']);
 	Route::get('/exportPaid/{type}', 'Admin\ExcelController@exportPaid');
 	Route::get('/exportAll/{type}', 'Admin\ExcelController@exportAll');
 	Route::resource('/addAdmin', 'Admin\AdminController');
@@ -60,4 +60,8 @@ Route::group(['middleware' => ['auth', 'adminauth']], function () {
 	Route::resource('/attendance', 'Admin\AttendanceController');
 	Route::resource('/pictureUpload', 'Admin\ImageController');
 	Route::resource('/docsUpload', 'Admin\PdfController');
+	Route::get('/certificate/create/{id}', ['as'=>'certificate.create', 'uses'=>'Admin\CertificateController@create']);
+	Route::post('/certificate/create/{id}', ['as'=>'certificate.store', 'uses'=>'Admin\CertificateController@store']);
+	Route::get('/certificate/edit/{id}', ['as'=>'certificate.edit', 'uses'=>'Admin\CertificateController@edit']);
+	Route::post('/certificate/edit/{id}', ['as'=>'certificate.update', 'uses'=>'Admin\CertificateController@update']);
 });

@@ -15,8 +15,7 @@ class SearchController extends Controller
 
         $search = $request->search_item;
         $listUsers = User::where('first_name', 'like', '%' . $search . '%')
-        ->orWhere('last_name', 'like', '%' . $search . '%')->orWhere('email', 'like', '%' . $search . '%')
-        ->paginate(20);
+        ->orWhere('last_name', 'like', '%' . $search . '%')->orWhere('email', 'like', '%' . $search . '%')->get();
 
         return view('dashboard.body.user.list', compact('indexUser', 'allUsers', 'listUsers'));
     }

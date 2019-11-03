@@ -5,6 +5,7 @@ use App\Admin;
 use App\User;
 use App\Pdf;
 use App\Picture;
+use App\Certificate;
 use Carbon\Carbon;
 
 function transaction() {
@@ -86,4 +87,17 @@ function allDocs()
 {
 	$getAllDocs = Pdf::count();
 	return $getAllDocs;
+}
+function certificate($id)
+{
+  $count = Certificate::where('user_id', $id)->count();
+
+  if($count == 0) {
+    $value = 0;
+  }
+  else {
+    $value = 1;
+  }
+
+  return $value;
 }
