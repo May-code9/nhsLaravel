@@ -66,6 +66,7 @@
                                   <th><i class="fa fa-star-half-full"></i></i> Status</th>
                                   <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
                                   <th><i class="fa fa-camera-retro"></i> QR Code</th>
+                                  <th></th>
                               </tr>
                               </thead>
                               <tbody>
@@ -95,6 +96,7 @@
                                           @else
                                       <td><a href="#">No QR</a> </td>
                                           @endif
+                                      <td><a href="/users/{{$listUser->id}}/edit" class="btn btn-sm btn-primary mr-2"><i class="fa fa-pencil"></i></a></td>
                                   </tr>
                               @empty
                                   <div><h1>No User Yet</h2></div>
@@ -110,6 +112,7 @@
                                   <th><i class="fa fa-star-half-full"></i></i> Status</th>
                                   <th><i class=" fa fa-calendar-o"></i> Upload Date</th>
                                   <th><i class="fa fa-camera-retro"></i> QR Code</th>
+                                  <th></th>
                               </tr>
                               </tfoot>
                           </table>

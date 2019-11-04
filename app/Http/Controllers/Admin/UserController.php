@@ -109,7 +109,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      $allUsers = 'active';
+      $createUser = 'active';
+
+      $user = User::findOrFail($id);
+
+      return view('dashboard.body.user.edit', compact('createUser', 'allUsers', 'user'));
     }
 
     /**
@@ -121,7 +126,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->update(['first_name'=>$request->first_name, 'last_name'=>$request->last_name,
+        'phone'=>$request->phone, 'email'=>$request->email]);
+
+        return redirect('/users')->with('success_status', 'User Updated');
     }
 
     /**
