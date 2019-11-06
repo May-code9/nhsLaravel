@@ -57,6 +57,8 @@
                                     @if(transaction() == 1)
                                         <li class="@if(isset($account)) {{ $account }} @endif"><a
                                                     href="{{ route('nma.account') }}">My Account</a></li>
+                                        <li class="@if(isset($cert)) {{ $cert }} @endif"><a
+                                                    href="{{ route('nma.certificate') }}">My Certificate</a></li>
                                     @endif
                                     @if(checkAdmin() == 1)
                                         <li class=""><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
@@ -120,6 +122,8 @@
                             @if(transaction() == 1)
                             <li class="@if(isset($account)) {{ $account }} @endif"><a href="{{ route('nma.account') }}">My
                                     Account</a></li>
+                            <li class="@if(isset($cert)) {{ $cert }} @endif"><a
+                                    href="{{ route('nma.certificate') }}">My Certificate</a></li>
                             @endif
                             @if(checkAdmin() == 1)
                                 <li class=""><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>

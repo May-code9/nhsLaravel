@@ -142,6 +142,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                  @if(session('success_status'))
+                  <div class="alert alert-success" role="alert">
+                    {{ session('success_status') }}
+                  </div>
+                  @endif
+                  @if(session('warning_status'))
+                  <div class="alert alert-warning" role="alert">
+                    {{ session('warning_status') }}
+                  </div>
+                  @endif
                     <h2 class="section-title wow fadeInLeft" data-wow-delay="0.2s"><span style="color: #42b3e5">Patient Centered Care</span>
                     </h2>
                     <!-- <p class="section-subcontent" style="text-align:left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. A <br> enean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p> -->

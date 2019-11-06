@@ -33,6 +33,7 @@ Route::get('/about/secretariat', ['as'=>'nma.about.secretariat', 'uses'=>'HomeCo
 Route::get('/docs/gallery', ['as'=>'nma.docs.gallery', 'uses'=>'HomeController@docs_gallery']);
 Route::get('/docs/pdf_docs', ['as'=>'nma.docs.pdf', 'uses'=>'HomeController@docs_pdf']);
 Route::get('/account', ['as'=>'nma.account', 'uses'=>'AccountController@account']);
+Route::get('/certificate', ['as'=>'nma.certificate', 'uses'=>'AccountController@certificate']);
 Route::post('/userPayment', 'TransactionController@userPayment')->name('userPayment');
 Route::group(['middleware'=>'cors'], function()
 {
